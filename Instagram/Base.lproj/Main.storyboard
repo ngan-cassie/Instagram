@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c49-3O-QpZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c49-3O-QpZ">
                                 <rect key="frame" x="87" y="635" width="84" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In">
@@ -52,7 +52,7 @@
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgd-4m-qMf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXk-Ou-6wQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXk-Ou-6wQ">
                                 <rect key="frame" x="233" y="635" width="94" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up">
@@ -71,17 +71,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="c49-3O-QpZ" firstAttribute="top" secondItem="hso-Ub-8pL" secondAttribute="bottom" constant="42" id="2cE-c0-SX7"/>
-                            <constraint firstItem="c49-3O-QpZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="3Vf-4V-ycU"/>
-                            <constraint firstItem="rXk-Ou-6wQ" firstAttribute="leading" secondItem="c49-3O-QpZ" secondAttribute="trailing" constant="62" id="LfP-ui-cjC"/>
+                            <constraint firstItem="c49-3O-QpZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="3Vf-4V-ycU"/>
+                            <constraint firstItem="rXk-Ou-6wQ" firstAttribute="leading" secondItem="c49-3O-QpZ" secondAttribute="trailing" constant="50" id="LfP-ui-cjC"/>
                             <constraint firstItem="EiD-n7-v0F" firstAttribute="top" secondItem="Qhd-j0-lss" secondAttribute="bottom" constant="20" id="PU6-iG-7R2"/>
                             <constraint firstItem="787-Aw-FTp" firstAttribute="top" secondItem="EiD-n7-v0F" secondAttribute="bottom" constant="25" id="Upl-FT-YcK"/>
                             <constraint firstItem="rXk-Ou-6wQ" firstAttribute="top" secondItem="hso-Ub-8pL" secondAttribute="bottom" constant="42" id="WJe-Jw-8Ev"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rXk-Ou-6wQ" secondAttribute="trailing" constant="87" id="a5N-Ll-3Jj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="rXk-Ou-6wQ" secondAttribute="trailing" constant="80" id="a5N-Ll-3Jj"/>
                             <constraint firstItem="EiD-n7-v0F" firstAttribute="top" secondItem="Qhd-j0-lss" secondAttribute="bottom" constant="20" id="b3c-fz-LVV"/>
                             <constraint firstItem="Qhd-j0-lss" firstAttribute="top" secondItem="WbW-2K-S8j" secondAttribute="bottom" constant="49" id="i1X-y1-6bU"/>
                             <constraint firstItem="hso-Ub-8pL" firstAttribute="top" secondItem="787-Aw-FTp" secondAttribute="bottom" constant="22" id="oDx-GM-lqZ"/>
                             <constraint firstItem="rXk-Ou-6wQ" firstAttribute="leading" secondItem="c49-3O-QpZ" secondAttribute="trailing" constant="62" id="pMh-Ax-Nt5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pMh-Ax-Nt5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="passField" destination="hso-Ub-8pL" id="zbR-As-BJI"/>
